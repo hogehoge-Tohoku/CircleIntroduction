@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--Bootstrap-->
+    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" rel="stylesheet">
+    <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
+    <!---->
+    <title>Home</title>
+</head>
+<body>
+<div class="page-header">
+    <h1>サークル一覧</h1>
+</div>
+<table class="table table-bordered table-hover table-striped">
+    <tr>
+        <th class="info col-sm-2">ID</th>
+        <th class="info col-sm-2">サークル名</th>
+        <th class="info col-sm-2">組織</th>
+        <th class="info col-sm-2">説明文</th>
+    </tr>
+    <tr th:each="circle : ${circleList}">
+        <td th:text="${circle.id}"></td>
+        <td th:text="${circle.name}"></td>
+        <td th:text="${circle.organization}"></td>
+        <td th:text="${circle.introduction}"></td>
+        <!--
+        <td>
+            <a class="btn btn-primary" th:href="@{'/userDetail/'+${user.userId}}">
+                詳細
+            </a>
+        </td>
+        -->
+    </tr>
+</table>
+
+</body>
+</html>
