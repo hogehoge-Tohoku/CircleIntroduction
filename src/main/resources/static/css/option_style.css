@@ -4,17 +4,21 @@ body{
     color: #707070;
 }
 .move{
-    font-size: 30px;
+    font-size: 40px;
     cursor:pointer;
     color:#707070;
 }
+.move:hover{
+    color:#333333;
+}
+
 
 .large li{
-    font-size: 50px;
+    font-size: 65px;
     list-style: none;
 }
 .small li{
-    font-size:30px;
+    font-size:40px;
     list-style: none;
     float:left;
     padding-right: 50px;
@@ -38,7 +42,7 @@ body{
     box-sizing: border-box;
     width: 30px;
     height: 30px;
-    margin-top: -20px;
+    margin-top: -15px;
     left: -10px;
     top: 50%;
     border: 1px solid #585753; /* 枠の色変更 お好きな色を */
@@ -49,8 +53,8 @@ body{
     position: absolute;
     display: block;
     box-sizing: border-box;
-    width: 28px;
-    height: 15px;
+    width: 30px;
+    height: 17px;
     margin-top: -18px;
     top: 50%;
     left: -5px;

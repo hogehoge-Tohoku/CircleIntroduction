@@ -9,13 +9,18 @@ body{
 }
 .return{
     color:#707070;
-    font-size:30px;
+    font-size:40px;
     /*position:absolute;
     top: 47px;
     left: 32px;
     padding: 0;
     margin:0;*/
 }
+.return:hover{
+    color: #333333;
+}
+
+
 h1{
     color:#707070;
     font-size:80px;
