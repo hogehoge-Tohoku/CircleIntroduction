@@ -1,6 +1,6 @@
 body{
     background-color: #F0F0F0;
-    font-family:Hiragino Kaku Gothic ProN ;
+    font-family:Arial,sans-serif;
     color: #707070;
 }
 .move{
@@ -27,7 +27,7 @@ body{
     display: none;
 }
 .small input[type="checkbox"]+label{
-    display: none;
+    /*display: none;*/
     cursor: pointer;
     display: inline-block;
     position: relative;
