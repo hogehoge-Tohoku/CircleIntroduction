@@ -24,7 +24,7 @@ class OptionController {
     var checkOrganization = mutableMapOf<String, String>()
 
     private fun initCheckClassification(): MutableMap<String, String> {
-        var check = mutableMapOf<String, String>()
+        val check = mutableMapOf<String, String>()
         check["学友会"] = "学友会"
         check["サークル"] = "サークル"
         check["自主ゼミ"] = "自主ゼミ"
@@ -32,7 +32,7 @@ class OptionController {
     }
 
     private fun initCheckOrganization(): MutableMap<String, String> {
-        var check = mutableMapOf<String, String>()
+        val check = mutableMapOf<String, String>()
         check["全学"] = "全学"
         check["医学部"] = "医学部"
         check["経済学部"] = "経済学部"

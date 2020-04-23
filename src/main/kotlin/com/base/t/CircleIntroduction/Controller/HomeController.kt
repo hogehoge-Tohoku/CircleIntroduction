@@ -2,7 +2,6 @@ package com.base.t.CircleIntroduction.Controller
 
 import com.base.t.CircleIntroduction.Domain.Circle
 import com.base.t.CircleIntroduction.Service.HomeService
-import com.base.t.CircleIntroduction.Service.OptionService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
@@ -17,8 +16,6 @@ class HomeController {
 
     @Autowired
     lateinit var homeService: HomeService
-    @Autowired
-    lateinit var optionService: OptionService
 
     @GetMapping("/")
     fun getHome(@ModelAttribute("model") modelMap: ModelMap, model: Model): String {
