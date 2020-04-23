@@ -1,4 +1,4 @@
-INSERT INTO circle(id, name, organization, introduction)
-VALUES ( 1, 'サークルhogehoge', '準加盟団体', '私たちのサークルはみんなんでホゲホゲしてます。');
-INSERT INTO circle(id, name, organization, introduction)
-VALUES ( 2, '酒飲みの会', '体育部', '美味しいお酒が飲みたい');
+INSERT INTO circle(id, name, classification, organization, introduction)
+VALUES ( 1, 'サークルhogehoge','サークル', '全学', '私たちのサークルはみんなんでホゲホゲしてます。');
+INSERT INTO circle(id, name, classification, organization, introduction)
+VALUES ( 2, '酒飲みの会', '自主ゼミ','全学', '美味しいお酒が飲みたい');

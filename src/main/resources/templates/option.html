@@ -1,31 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="../static/css/option_style.css">
+    <title>条件選択</title>
+    <!--<link rel="stylesheet" th:href="@{/css/option_style.css}">-->
 </head>
 <body>
-    <a class="move" href="home-m.html">< 条件を適応</a>
+    <form method="post" class="move" th:action="@{/option}" th:object="${conditionalForm}" >
+        <button type="submit" class="move">
+            条件を適用
+        </button>
     <ul class="large">
         <li>分類
-            <ul class="small">
-                <li><input id="sample1" type="checkbox"><label for="sample1">学友会</label></li>
-                <li><input id="sample2" type="checkbox"><label for="sample2">サークル</label></li>
-                <li><input id="sample3" type="checkbox"><label for="sample3">自主ゼミ</label></li>
+            <ul class="small" th:each="classification, classificationStat : ${checkClassification}">
+                <li>
+                    <label>
+                        <input name="classification" type="checkbox"
+                             th:value="${classification.value}"
+                             th:field="*{conditionalClassification[__${classificationStat.index}__]}"
+                             th:text="${classification.key}"/>
+
+                    </label>
+                </li>
             </ul><br>
         <li>所属
-            <ul class="small">
-                <li><input id="op1" type="checkbox"><label for="op1">全学</label></li>
-                <li><input id="op2" type="checkbox"><label for="op2">医学部</label></li>
-                <li><input id="op3" type="checkbox"><label for="op3">経済学部</label></li>
-                <li><input id="op4" type="checkbox"><label for="op4">法学部</label></li>
+            <ul class="small" th:each="organization, organizationStat : ${checkOrganization}">
+                <li>
+                    <label>
+                        <input name="organization" type="checkbox"
+                            th:value="${organization.value}"
+                            th:field="*{conditionalOrganization[__${organizationStat.index}__]}"
+                            th:text="${organization.key}"/>
+                    </label>
+                </li>
             </ul>
         </li>
 
     </ul>
 
-
+    </form>
 
 </body>
 </html>

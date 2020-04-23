@@ -1,6 +1,6 @@
 package com.base.t.CircleIntroduction.Service
 
-import com.base.t.CircleIntroduction.Entity.Circle
+import com.base.t.CircleIntroduction.Domain.Circle
 import com.base.t.CircleIntroduction.Repository.Jdbc.CircleDaoJdbcImpl
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service

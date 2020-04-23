@@ -1,6 +1,6 @@
 package com.base.t.CircleIntroduction.Repository
 
-import com.base.t.CircleIntroduction.Entity.Circle
+import com.base.t.CircleIntroduction.Domain.Circle
 
 interface CircleDao {
 
@@ -13,6 +13,6 @@ interface CircleDao {
     //サークル全件取得
     fun selectAll(): List<Circle>
 
-    //組織別でサークルを取得
-    fun selectOrganization(organization: String): List<Circle>
+    //組織と所属でサークルを取得
+    fun conditionalSelect(classification: List<String?>? ,organization: List<String?>?): List<Circle>
 }
