@@ -14,10 +14,10 @@ class OptionService{
     fun conditionalSelect(classification: MutableList<String?>?, organization: MutableList<String?>?): List<Circle> {
         //全く選択していないまたはどちらも少なくとも一つ以上選択している場合
         return if (classification!!.size < 1 && organization!!.size < 1 ||
-                classification!!.size > 0 && organization!!.size > 0) {
+                classification.size > 0 && organization!!.size > 0) {
             dao.conditionalSelect(classification, organization)
         }//classificationを選択していなくかつorganizationは選択している場合
-        else if(classification!!.size < 1) {
+        else if(classification.size < 1) {
             dao.organizationSelect(organization)
         }//organizationを選択していなくかつclassificationは選択している場合
         else {
@@ -27,10 +27,10 @@ class OptionService{
 
     fun conditionalCount(classification: MutableList<String?>?, organization: MutableList<String?>?): Int {
         return if (classification!!.size < 1 && organization!!.size < 1 ||
-                classification!!.size > 0 && organization!!.size > 0) {
+                classification.size > 0 && organization!!.size > 0) {
             dao.conditionalSelect(classification, organization).size
         }//classificationを選択していなくかつorganizationは選択している場合
-        else if(classification!!.size < 1) {
+        else if(classification.size < 1) {
             dao.organizationSelect(organization).size
         }//organizationを選択していなくかつclassificationは選択している場合
         else {
