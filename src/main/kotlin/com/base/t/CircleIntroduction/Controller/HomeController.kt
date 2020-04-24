@@ -20,11 +20,11 @@ class HomeController {
     @GetMapping("/")
     fun getHome(@ModelAttribute("model") modelMap: ModelMap, model: Model): String {
 
-        val optionCircleList = modelMap["optionalCircle"] as List<*>?
+        val optionCircleList = modelMap["optionalCircle"]
         val optionalCount = modelMap["optionalCount"]
-        print(optionCircleList)
+        println(optionCircleList)
         val circleList = homeService.selectAll()
-        if(optionCircleList == null || optionCircleList.isEmpty()) {
+        if(optionCircleList == null) {
             model.addAttribute("circleList", circleList)
             val count = homeService.count()
             model.addAttribute("count", count)
