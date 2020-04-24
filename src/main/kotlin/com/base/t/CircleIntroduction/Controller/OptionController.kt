@@ -58,13 +58,18 @@ class OptionController {
         if(bindingResult.hasErrors()){
             return getOption(form, model)
         }
-        println(form)
+        var flag = false
         if (form != null) {
+            form.conditionalClassification!!.removeAll(listOf(null))
+            form.conditionalOrganization!!.removeAll(listOf(null))
+            println(form)
+            if(form.conditionalClassification!!.size < 1 && form.conditionalOrganization!!.size < 1) flag = true
             val optionalCircle = optionService.conditionalSelect(form.conditionalClassification, form.conditionalOrganization)
             val optionalCount = optionService.conditionalCount(form.conditionalClassification, form.conditionalOrganization)
             val modelMap = ModelMap()
                     .addAttribute("optionalCircle", optionalCircle)
                     .addAttribute("optionalCount", optionalCount)
+                    .addAttribute("flag", flag)
             redirectAttributes.addFlashAttribute("model", modelMap)
         }
 

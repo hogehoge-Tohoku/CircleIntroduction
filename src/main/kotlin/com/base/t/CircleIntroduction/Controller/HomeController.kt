@@ -22,9 +22,10 @@ class HomeController {
 
         val optionCircleList = modelMap["optionalCircle"]
         val optionalCount = modelMap["optionalCount"]
+        val flag = modelMap["flag"]
         println(optionCircleList)
-        val circleList = homeService.selectAll()
-        if(optionCircleList == null) {
+        if(optionCircleList == null || flag == true) {
+            val circleList = homeService.selectAll()
             model.addAttribute("circleList", circleList)
             val count = homeService.count()
             model.addAttribute("count", count)

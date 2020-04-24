@@ -14,5 +14,9 @@ interface CircleDao {
     fun selectAll(): List<Circle>
 
     //組織と所属でサークルを取得
-    fun conditionalSelect(classification: List<String?>? ,organization: List<String?>?): List<Circle>
+    fun conditionalSelect(classification: MutableList<String?>? ,organization: MutableList<String?>?): List<Circle>
+
+    fun classificationSelect(classification: MutableList<String?>?): List<Circle>
+
+    fun organizationSelect(classification: MutableList<String?>?): List<Circle>
 }
