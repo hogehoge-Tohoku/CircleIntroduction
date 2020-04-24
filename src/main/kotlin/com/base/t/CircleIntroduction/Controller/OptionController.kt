@@ -25,6 +25,7 @@ class OptionController {
 
     private fun initCheckClassification(): MutableMap<String, String> {
         val check = mutableMapOf<String, String>()
+        //TODO:ちゃんとしたやつにする
         check["学友会"] = "学友会"
         check["サークル"] = "サークル"
         check["自主ゼミ"] = "自主ゼミ"
@@ -65,7 +66,6 @@ class OptionController {
                     .addAttribute("optionalCircle", optionalCircle)
                     .addAttribute("optionalCount", optionalCount)
             redirectAttributes.addFlashAttribute("model", modelMap)
-
         }
 
         return "redirect:/"
