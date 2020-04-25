@@ -21,7 +21,6 @@ class HomeController {
     fun getHome(@ModelAttribute("model") modelMap: ModelMap, model: Model): String {
 
         val optionCircleList = modelMap["optionalCircle"]
-        val optionalCount = modelMap["optionalCount"]
         val flag = modelMap["flag"]
         println(optionCircleList)
         if(optionCircleList == null || flag == true) {
@@ -30,6 +29,7 @@ class HomeController {
             val count = homeService.count()
             model.addAttribute("count", count)
         }else {
+            val optionalCount = modelMap["optionalCount"]
             model.addAttribute("circleList", optionCircleList)
             model.addAttribute("count", optionalCount)
         }
@@ -43,7 +43,10 @@ class HomeController {
         form.name = circle.name
         form.organization = circle.organization
         form.introduction = circle.introduction
+        form.pictureName = circle.pictureName
+        form.pictureNum = circle.pictureNum
         model.addAttribute("form", form)
         return "circleDetail"
     }
+
 }

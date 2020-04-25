@@ -23,7 +23,8 @@ class CircleDaoJdbcImpl: CircleDao {
                 rs.getString("classification"),
                 rs.getString("organization"),
                 rs.getString("introduction"),
-                rs.getString("picture_name")
+                rs.getString("picture_name"),
+                rs.getInt("picture_num")
         )
     }
 
@@ -44,7 +45,8 @@ class CircleDaoJdbcImpl: CircleDao {
                 map["classification"] as String,
                 map["organization"] as String?,
                 map["introduction"] as String?,
-                map["picture_name"] as String?
+                map["picture_name"] as String?,
+                map["picture_num"] as Int?
         )
     }
 

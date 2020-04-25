@@ -11,6 +11,9 @@
     <div class="top" th:object="${form}">
         <a class="return" th:href="@{'/'}" th:text="一覧に戻る"></a>
         <h1 th:text="${form.name}"></h1>
+        <div th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
+            <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="572px" height="352px">
+        </div>
     </div>
 
 </body>

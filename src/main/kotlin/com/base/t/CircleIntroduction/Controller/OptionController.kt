@@ -25,10 +25,12 @@ class OptionController {
 
     private fun initCheckClassification(): MutableMap<String, String> {
         val check = mutableMapOf<String, String>()
-        //TODO:ちゃんとしたやつにする
-        check["学友会"] = "学友会"
-        check["サークル"] = "サークル"
-        check["自主ゼミ"] = "自主ゼミ"
+        check["学友会体育部"] = "学友会体育部"
+        check["学友会体育部準加盟団体"] = "学友会体育部準加盟団体"
+        check["学友会文化部"] = "学友会文化部"
+        check["学友会文化部準加盟団体"] = "学友会文化部準加盟団体"
+        check["非学友会(サークル)"] = "非学友会(サークル)"
+        check["その他"] = "その他"
         return check
     }
 
@@ -36,9 +38,8 @@ class OptionController {
         val check = mutableMapOf<String, String>()
         check["全学"] = "全学"
         check["医学部"] = "医学部"
-        check["経済学部"] = "経済学部"
-        check["法学部"] = "法学部"
-        check["インカレ"] = "インカレ"
+        check["歯学部"] = "歯学部"
+        check["インターカレッジ"] = "インターカレッジ"
         return check
     }
 

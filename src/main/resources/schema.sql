@@ -4,5 +4,6 @@ CREATE TABLE IF NOT EXISTS circle(
     classification VARCHAR(50),
     organization VARCHAR(50),
     introduction TEXT,
-    picture_name VARCHAR(50)
+    picture_name VARCHAR(50),
+    picture_num INT
 );
