@@ -38,6 +38,7 @@ class OptionController {
         check["医学部"] = "医学部"
         check["経済学部"] = "経済学部"
         check["法学部"] = "法学部"
+        check["インカレ"] = "インカレ"
         return check
     }
 

@@ -11,7 +11,6 @@ body{
 .move:hover{
     color:#333333;
 }
-
 .large li{
     font-size: 65px;
     list-style: none;
@@ -33,7 +32,6 @@ body{
     padding-left: 25px;
     padding-right: 10px;
 }
-
 .small input[type="checkbox"]+label::before{
     content: "";
     position: absolute;
@@ -62,9 +60,6 @@ body{
     border-left: 3px solid;
     border-color:  #585753; /* チェックの色変更 お好きな色を */
 }
-
-
-
 
 
 
