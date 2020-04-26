@@ -7,7 +7,7 @@ body{
 .top{
     height:226px;
     border-bottom: 1px solid #707070;
-    position:fixed;
+    /*position:fixed;*/
     z-index: 1;
 }
 .return{
@@ -25,7 +25,7 @@ h1{
     font-weight: normal;
     top: 113px;
     left: 32px;
-    padding: 0;
+    padding: 30px 0 0 50px;
     margin: 0;
 }
 
@@ -33,25 +33,26 @@ h1{
     font-size: 50px;
     color:#707070;
     z-index: 0;
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
 .content{
     font-size: 35px;
 }
 .image{
-    display: flex;
-    flex-direction: column;
+
+    padding-left: 10%;
 }
 .photo{
     padding: 10px;
+    float: left;
 }
 
-@media(max-width:1000px){
-    .main {
-        font-size: 100px;
-    }
+.container{
+    padding:0 10%;
 }
+
+
 
 
 
