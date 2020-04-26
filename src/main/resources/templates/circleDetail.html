@@ -51,7 +51,9 @@
         <h2 class="main schedule">2020年度新歓情報</h2>
         <p class="content" th:text="*{welcomePartyInf}"></p>
         <h2 class="main mail">問い合わせ</h2>
-        <p class="content" th:text="*{inquiry}"></p>
+        <p class="content">
+            <a href="mailto:info@example.com" th:text="*{inquiry}"></a>
+        </p>
     </div>
     <div  class="image" th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
         <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="572px" height="352px">
