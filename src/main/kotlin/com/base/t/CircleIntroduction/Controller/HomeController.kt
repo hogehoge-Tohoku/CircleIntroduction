@@ -48,5 +48,4 @@ class HomeController {
         model.addAttribute("form", form)
         return "circleDetail"
     }
-
 }

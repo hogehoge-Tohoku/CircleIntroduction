@@ -1,6 +1,5 @@
 <style>/*<!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Detail</title>
@@ -30,22 +29,23 @@
 
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Detail</title>
-    <link href="../static/css/circleDetail.css" rel="stylesheet">
+    <link th:href="@{/css/circleDetail.css}" rel="stylesheet">
     <meta name=”viewport” content=”width=device-width, initial-scale=1”>
 </head>
 <body>
-<div class="top">
-    <a class="return" href="#">＜一覧に戻る</a>
-    <h1>hogehoge</h1>
+<div class="top" th:object="${form}">
+    <a href="#" class="return" onclick="history.back(); return false;">＜一覧に戻る</a>
+    <h1 th:text="*{name}"></h1>
 
 </div>
 <div class="main">
     <div class="container">
         <h2 class="main activity">活動内容</h2>
-        <p class="content">hoge</p>
+        <p class="content" th:text="*{introduction}"></p>
         <h2 class="main member">雰囲気</h2>
         <p class="content">hoge</p>
         <h2 class="main schedule">2020年度新歓情報</h2>
