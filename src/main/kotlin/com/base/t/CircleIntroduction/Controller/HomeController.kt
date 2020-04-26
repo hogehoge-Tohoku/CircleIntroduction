@@ -42,7 +42,11 @@ class HomeController {
         form.id = circle.id
         form.name = circle.name
         form.organization = circle.organization
+        form.classification = circle.classification
+        form.atmosphere = circle.atmosphere
         form.introduction = circle.introduction
+        form.welcomePartyInf = circle.welcomePartyInf
+        form.inquiry = circle.inquiry
         form.pictureName = circle.pictureName
         form.pictureNum = circle.pictureNum
         model.addAttribute("form", form)
