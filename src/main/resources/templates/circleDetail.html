@@ -56,7 +56,7 @@
         </p>
     </div>
     <div  class="image" th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
-        <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="572px" height="352px">
+        <img class="photo" th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="572px" height="352px">
     </div>
 </div>
 
