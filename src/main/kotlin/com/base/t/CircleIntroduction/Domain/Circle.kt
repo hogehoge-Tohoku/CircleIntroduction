@@ -6,5 +6,6 @@ data class Circle(
         var name: String?,
         var classification: String?,
         var organization: String?,
-        var introduction: String?
+        var introduction: String?,
+        var pictureName: String?
 )

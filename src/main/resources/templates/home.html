@@ -14,7 +14,7 @@
  </div>
  <div class="container"  th:each="circle : ${circleList}">
      <div class="circle">
-         <img src="/image/lUcpYpEk36uDcZeGjRa2Hv2UN4MVd75WIOMpwTNj.jpeg" width="572px" height="352px">
+         <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
             <div class="sub">
                 <a class="name" th:href="@{'/circleDetail/'+${circle.id}}" th:text="${circle.name}"></a>
                 <p class="content" th:text="${circle.organization}"></p>
