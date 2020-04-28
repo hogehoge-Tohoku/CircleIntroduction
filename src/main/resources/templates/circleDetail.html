@@ -1,32 +1,3 @@
-<style>/*<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detail</title>
-    <link th:href="@{/css/circleDetail.css}" rel="stylesheet">
-
-</head>
-<body>
-    <div class="top" th:object="${form}">
-        <a class="return" th:href="@{'/'}" th:text="一覧に戻る"></a>
-        <h1 th:text="${form.name}"></h1>
-        <div th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
-            <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="572px" height="352px">
-        </div>
-    </div>
-    <div class="container">
-        <p class="main content">活動内容<p>
-        <p class="main member">雰囲気</p>
-        <p class="main schedule">2020年度新歓情報</p>
-        <p class="main SNS">各種SNS</p>
-        <p class="main mail">問い合わせ</p>
-    </div>
-
-
-
-</body>
-</html></style>
-
 <!DOCTYPE html>
 <html lang="en">
 <html xmlns:th="http://www.thymeleaf.org">
