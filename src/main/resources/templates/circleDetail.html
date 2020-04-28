@@ -34,7 +34,7 @@
     <meta charset="UTF-8">
     <title>Detail</title>
     <link th:href="@{/css/circleDetail.css}" rel="stylesheet" >
-    <meta name=”viewport” content=”width=device-width, initial-scale=1”>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 <div class="top">
@@ -44,13 +44,13 @@
 </div>
 <div class="main" th:object="${form}">
     <div class="container">
-        <h2 class="main activity">活動内容</h2>
+        <h2 class="item activity">活動内容</h2>
         <p class="content" th:text="*{introduction}"></p>
-        <h2 class="main member">雰囲気</h2>
+        <h2 class="item member">雰囲気</h2>
         <p class="content" th:text="*{atmosphere}"></p>
-        <h2 class="main schedule">2020年度新歓情報</h2>
+        <h2 class="item schedule">2020年度新歓情報</h2>
         <p class="content" th:text="*{welcomePartyInf}"></p>
-        <h2 class="main mail">問い合わせ</h2>
+        <h2 class="item mail">問い合わせ</h2>
         <p class="content" th:text="*{inquiry}"></p>
     </div>
     <div  class="image" th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
