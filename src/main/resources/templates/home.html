@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<html xmlns:th="http://www.thymleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <!--Bootstrap-->
-    <link th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" rel="stylesheet">
-    <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
-    <script th:src="@{/webjars/bootstrap/3.3.7-1/js/bootstrap.min.js}"></script>
-    <!---->
-    <title>Home</title>
+    <title>Title</title>
+    <link th:href="@{/css/home.css}" rel="stylesheet">
 </head>
 <body>
-<div class="page-header">
-    <h1>サークル一覧</h1>
-</div>
-<table class="table table-bordered table-hover table-striped">
-    <tr>
-        <th class="info col-sm-2">サークル名</th>
-        <th class="info col-sm-2">組織</th>
-        <th class="info col-sm-2"></th>
-    </tr>
-    <tr th:each="circle : ${circleList}">
-        <td th:text="${circle.name}"></td>
-        <td th:text="${circle.organization}"></td>
-        <td>
-            <a class="btn btn-primary" th:href="@{'/circleDetail/'+${circle.id}}">
-                詳細
-            </a>
-        </td>
-    </tr>
-</table>
-
+ <div class="top">
+     <h1>東北大学生のためのサークル探しサイト</h1>
+     <h2>Search</h2>
+     <p class="hit">サークル一覧　<span th:text="${count}"></span>件ヒット<a class="search" th:href="@{'/option'}">条件を絞る</a></p>
+ </div>
+ <div class="container"  th:each="circle : ${circleList}">
+     <div class="circle">
+         <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
+            <div class="sub">
+                <a class="name" th:href="@{'/circleDetail/'+${circle.id}}" th:text="${circle.name}"></a>
+                <p class="content" th:text="${circle.organization}"></p>
+            </div>
+     </div>
+ </div>
 </body>
 </html>

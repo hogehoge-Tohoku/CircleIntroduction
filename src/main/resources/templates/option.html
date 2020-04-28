@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>条件選択</title>
+    <link rel="stylesheet" th:href="@{/css/option.css}">
+</head>
+
+<!--TODO:入力の縛りを実装-->
+<body>
+    <form method="post" class="move" th:action="@{/option}" th:object="${conditionalForm}" >
+        <button type="submit" class="move">
+            条件を適用
+        </button>
+    <ul class="large">
+        <li>分類
+            <ul class="small" th:each="classification, classificationStat : ${checkClassification}">
+                <li>
+                    <label>
+                        <input name="classification" type="checkbox"
+                             th:value="${classification.value}"
+                             th:field="*{conditionalClassification[__${classificationStat.index}__]}"
+                             th:text="${classification.key}"/>
+                    </label>
+                </li>
+            </ul><br>
+        <li>所属
+            <ul class="small" th:each="organization, organizationStat : ${checkOrganization}">
+                <li>
+                    <label>
+                        <input name="organization" type="checkbox"
+                            th:value="${organization.value}"
+                            th:field="*{conditionalOrganization[__${organizationStat.index}__]}"
+                            th:text="${organization.key}"/>
+                    </label>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+
+    </form>
+
+</body>
+</html>

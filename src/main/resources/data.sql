@@ -1,4 +1,69 @@
-INSERT INTO circle(id, name, organization, introduction)
-VALUES ( 1, 'サークルhogehoge', '準加盟団体', '私たちのサークルはみんなんでホゲホゲしてます。');
-INSERT INTO circle(id, name, organization, introduction)
-VALUES ( 2, '酒飲みの会', '体育部', '美味しいお酒が飲みたい');
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ inquiry,
+ picture_name,
+ picture_num)
+VALUES (
+ 1,
+ 'TENNIS_FOO',
+ '学友会体育部',
+ '全学',
+ '30人程度、男女比1:1',
+ '私たちはテニスを楽しむサークルです！
+ 基本的に参加自由で毎日テニスをする人、たまに顔を出す人などそれぞれです！
+ 今年の新歓はZoomなどオンラインでのイベントを企画してます！
+ 詳しい情報が気になる方は下記のTwitterアカウントやサークルのメールアドレスなどから連絡お待ちしております！',
+ 'Zoomを用いたサークルの説明会を開催。',
+ 'tennis_foo@example.com',
+ 'hogehoge',
+ 4);
+ INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ inquiry,
+ picture_name,
+ picture_num)
+VALUES (
+ 2,
+ 'お酒を飲む会',
+ '非学友会(サークル)',
+ '全学',
+ 'hoge',
+ '美味しいお酒が飲みたい',
+ 'hoge',
+ 'hoge.com',
+ 'osakewoNomukai',
+ 1);
+ INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ inquiry,
+ picture_name,
+ picture_num)
+VALUES (
+ 3,
+ 'bar',
+ '非学友会(サークル)',
+ 'インターカレッジ',
+ 'huga',
+ '美味しいお酒が飲みたい',
+ 'huga',
+ 'huga.com',
+ 'bar',
+ 1);

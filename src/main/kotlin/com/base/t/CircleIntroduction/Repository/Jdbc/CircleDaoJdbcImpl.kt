@@ -1,6 +1,6 @@
 package com.base.t.CircleIntroduction.Repository.Jdbc
 
-import com.base.t.CircleIntroduction.Entity.Circle
+import com.base.t.CircleIntroduction.Domain.Circle
 import com.base.t.CircleIntroduction.Repository.CircleDao
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.jdbc.core.RowMapper
@@ -9,9 +9,9 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate
 import org.springframework.jdbc.core.namedparam.SqlParameterSource
 import org.springframework.stereotype.Repository
 
+@Suppress("SqlResolve")
 @Repository
 class CircleDaoJdbcImpl: CircleDao {
-
 
     @Autowired
     lateinit var jdbc: NamedParameterJdbcTemplate
@@ -20,8 +20,14 @@ class CircleDaoJdbcImpl: CircleDao {
         Circle(
                 rs.getInt("id"),
                 rs.getString("name"),
+                rs.getString("classification"),
                 rs.getString("organization"),
-                rs.getString("introduction")
+                rs.getString("atmosphere"),
+                rs.getString("introduction"),
+                rs.getString("welcome_party_inf"),
+                rs.getString("inquiry"),
+                rs.getString("picture_name"),
+                rs.getInt("picture_num")
         )
     }
 
@@ -31,7 +37,7 @@ class CircleDaoJdbcImpl: CircleDao {
     }
 
     override fun selectOne(id: Int): Circle {
-        var sql = "SELECT * FROM circle WHERE id = :id"
+        val sql = "SELECT * FROM circle WHERE id = :id"
         val param: SqlParameterSource = MapSqlParameterSource()
                 .addValue("id", id)
         val map = jdbc.queryForMap(sql, param)
@@ -39,8 +45,14 @@ class CircleDaoJdbcImpl: CircleDao {
         return Circle(
                 map["id"] as Int?,
                 map["name"] as String?,
+                map["classification"] as String,
                 map["organization"] as String?,
-                map["introduction"] as String?
+                map["atmosphere"] as String?,
+                map["introduction"] as String?,
+                map["welcome_party_inf"] as String?,
+                map["inquiry"] as String?,
+                map["picture_name"] as String?,
+                map["picture_num"] as Int?
         )
     }
 
@@ -49,8 +61,33 @@ class CircleDaoJdbcImpl: CircleDao {
         return jdbc.query(sql, rowMapper)
     }
 
-    override fun selectOrganization(organization: String):List<Circle> {
-        TODO("Not yet implemented")
+    override fun conditionalSelect(classification: MutableList<String?>?, organization: MutableList<String?>?): List<Circle> {
+
+        val sql = "SELECT * FROM circle " +
+                "WHERE (classification IN (:classification)) " +
+                "AND (organization IN (:organization))"
+        val param: SqlParameterSource = MapSqlParameterSource()
+                .addValue("classification", classification)
+                .addValue("organization", organization)
+        return jdbc.query(sql, param, rowMapper)
     }
 
+    override fun classificationSelect(classification: MutableList<String?>?):List<Circle> {
+
+        val sql = "SELECT * FROM circle " +
+                "WHERE classification IN (:classification)"
+        val param: SqlParameterSource = MapSqlParameterSource()
+                .addValue("classification", classification)
+
+        return jdbc.query(sql, param, rowMapper)
+    }
+
+    override fun organizationSelect(organization: MutableList<String?>?):List<Circle> {
+        val sql = "SELECT * FROM circle " +
+                "WHERE organization IN (:organization)"
+        val param: SqlParameterSource = MapSqlParameterSource()
+                .addValue("organization", organization)
+
+        return jdbc.query(sql, param, rowMapper)
+    }
 }

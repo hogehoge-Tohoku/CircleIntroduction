@@ -1,0 +1,98 @@
+body{
+    background-color:#F0F0F0;
+    font-family:"Hiragino Kaku Gothic ProN";
+}
+.top{
+    background-color:#F0F0F0;
+    /*height:416px;*/
+}
+h1{
+    color:#9A9A9A;
+    font-size:30px;
+    text-align: center;
+    font-weight: normal;
+    padding-top:75px;
+    padding-bottom:0;
+    line-height:30px;
+    margin:0 0;
+}
+.top h2{
+    color:#20358D;
+    font-size:150px;
+    text-align: center;
+    font-weight: normal;
+    padding-top:0;
+    line-height:150px;
+    margin:0 0;
+}
+.search {
+    font-size: 40px;
+    cursor: pointer;
+    float:right;
+    color:#707070;
+
+}
+
+.hit{
+    color:#707070;
+    font-size:40px;
+    border:1px solid #707070;
+    background-color:#FFFFFF ;
+    padding-right: 40px;
+
+}
+.container{
+    margin:0 auto;
+    padding-left:50px;
+}
+
+
+.circle {
+    position:relative;
+    /*top:518px;
+    left:53px;*/
+    float:left;
+    padding-right:50px;
+    padding-bottom:30px;
+}
+.sub{
+    position:absolute;
+    /*top:528px;
+    left:63px;*/
+    top:10px;
+    left:10px;
+    height:150px;
+    width:400px;
+    background-color: #F0F0F0;
+    opacity: 0.8;
+}
+
+.name{
+    font-size:39px;
+    color:#707070;
+    margin:0;
+    padding:0;
+    position:absolute;
+    /*top: 560px;
+    left: 84px;*/
+    top:30px;
+    left:30px;
+    cursor: pointer;
+
+}
+.content{
+    font-size:30px;
+    color:#9A9A9A;
+    margin:0;
+    padding:0;
+    position: absolute;
+    /*top: 617px;
+    left: 84px;*/
+    top:90px;
+    left:30px;
+}
+
+
+
+
+

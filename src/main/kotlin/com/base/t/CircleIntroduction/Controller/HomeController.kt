@@ -1,10 +1,11 @@
 package com.base.t.CircleIntroduction.Controller
 
-import com.base.t.CircleIntroduction.Entity.Circle
+import com.base.t.CircleIntroduction.Domain.Circle
 import com.base.t.CircleIntroduction.Service.HomeService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
+import org.springframework.ui.ModelMap
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.ModelAttribute
 import org.springframework.web.bind.annotation.PathVariable
@@ -16,13 +17,22 @@ class HomeController {
     @Autowired
     lateinit var homeService: HomeService
 
-    @GetMapping("/home")
-    fun getHome(model: Model): String {
-        val circleList = homeService.selectAll()
-        model.addAttribute("circleList", circleList)
+    @GetMapping("/")
+    fun getHome(@ModelAttribute("model") modelMap: ModelMap, model: Model): String {
 
-        val count = homeService.count()
-        model.addAttribute("count", count)
+        val optionCircleList = modelMap["optionalCircle"]
+        val flag = modelMap["flag"]
+        println(optionCircleList)
+        if(optionCircleList == null || flag == true) {
+            val circleList = homeService.selectAll()
+            model.addAttribute("circleList", circleList)
+            val count = homeService.count()
+            model.addAttribute("count", count)
+        }else {
+            val optionalCount = modelMap["optionalCount"]
+            model.addAttribute("circleList", optionCircleList)
+            model.addAttribute("count", optionalCount)
+        }
         return "home"
     }
 
@@ -32,9 +42,14 @@ class HomeController {
         form.id = circle.id
         form.name = circle.name
         form.organization = circle.organization
+        form.classification = circle.classification
+        form.atmosphere = circle.atmosphere
         form.introduction = circle.introduction
+        form.welcomePartyInf = circle.welcomePartyInf
+        form.inquiry = circle.inquiry
+        form.pictureName = circle.pictureName
+        form.pictureNum = circle.pictureNum
         model.addAttribute("form", form)
         return "circleDetail"
     }
-
 }
