@@ -1,6 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
+	application
 	id("org.springframework.boot") version "2.2.6.RELEASE"
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	kotlin("jvm") version "1.3.71"
@@ -27,6 +28,22 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test") {
 		exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
 	}
+}
+
+application {
+	// Define the main class for the application
+	mainClassName = "com.base.t.CircleIntroduction.CircleIntroductionApplication.Kt"
+}
+
+val jar by tasks.getting(Jar::class) {
+	manifest {
+		attributes["Main-Class"] = "com.base.t.CircleIntroduction.CircleIntroductionApplication.Kt"
+	}
+	from(
+			configurations.compile.get().map {
+				if (it.isDirectory) it else zipTree(it)
+			}
+	)
 }
 
 tasks.withType<Test> {
