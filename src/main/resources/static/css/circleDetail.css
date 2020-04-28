@@ -9,6 +9,7 @@ body{
     border-bottom: 1px solid #707070;
     /*position:fixed;*/
     z-index: 1;
+    margin-bottom: 10px;
 }
 .return{
     color:#707070;
@@ -31,10 +32,12 @@ h1{
 
 .main{
     z-index: 0;
-    margin:0 10%;
 }
 .container{
+    margin-left:7%;
+    width: 70%;
     padding-bottom:30px;
+    float: left;
 }
 .item{
     font-size: 40px;
@@ -42,24 +45,20 @@ h1{
     margin:10px 0 0 0;
 }
 .content{
+    margin:8px 0 12px 5px;
     font-size: 25px;
     color:#707070;
-    margin: 10px 0 0 0;
 
+}
+.image_wrapper{
+    margin-right: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 .image{
-    float: left;
+    margin:10px 0;
+    border: 5px solid #FFFFFF ;
+    display: inline-block;
 }
-.photo{
-    padding: 10px 10px;
-    float:left;
-}
-
-
-
-
-
-
-
-
 
