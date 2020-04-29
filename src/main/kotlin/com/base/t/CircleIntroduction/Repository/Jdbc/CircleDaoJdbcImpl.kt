@@ -63,9 +63,7 @@ class CircleDaoJdbcImpl: CircleDao {
 
     override fun conditionalSelect(classification: MutableList<String?>?, organization: MutableList<String?>?): List<Circle> {
 
-        val sql = "SELECT * FROM circle " +
-                "WHERE (classification IN (:classification)) " +
-                "AND (organization IN (:organization))"
+        val sql = "SELECT * FROM circle WHERE classification IN (:classification) AND organization IN (:organization)"
         val param: SqlParameterSource = MapSqlParameterSource()
                 .addValue("classification", classification)
                 .addValue("organization", organization)
@@ -74,8 +72,7 @@ class CircleDaoJdbcImpl: CircleDao {
 
     override fun classificationSelect(classification: MutableList<String?>?):List<Circle> {
 
-        val sql = "SELECT * FROM circle " +
-                "WHERE classification IN (:classification)"
+        val sql = "SELECT * FROM circle WHERE classification IN (:classification)"
         val param: SqlParameterSource = MapSqlParameterSource()
                 .addValue("classification", classification)
 
@@ -83,8 +80,7 @@ class CircleDaoJdbcImpl: CircleDao {
     }
 
     override fun organizationSelect(organization: MutableList<String?>?):List<Circle> {
-        val sql = "SELECT * FROM circle " +
-                "WHERE organization IN (:organization)"
+        val sql = "SELECT * FROM circle WHERE organization IN (:organization)"
         val param: SqlParameterSource = MapSqlParameterSource()
                 .addValue("organization", organization)
 

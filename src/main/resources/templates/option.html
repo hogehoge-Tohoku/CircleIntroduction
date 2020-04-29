@@ -7,7 +7,6 @@
     <link rel="stylesheet" th:href="@{/css/option.css}">
 </head>
 
-<!--TODO:入力の縛りを実装-->
 <body>
     <form method="post" class="move" th:action="@{/option}" th:object="${conditionalForm}" >
         <button type="submit" class="move">
@@ -24,7 +23,9 @@
                              th:text="${classification.key}"/>
                     </label>
                 </li>
-            </ul><br>
+            </ul>
+        </li>
+        <br><br><br>
         <li>所属
             <ul class="small" th:each="organization, organizationStat : ${checkOrganization}">
                 <li>
@@ -37,7 +38,6 @@
                 </li>
             </ul>
         </li>
-
     </ul>
 
     </form>
