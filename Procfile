@@ -1,1 +1,1 @@
-web: java -jar target/CircleIntroduction-0.0.1-SNAPSHOT.jar --server.port=${PORT} --spring.profiles.active=heroku
+web:java -Dserver.port=$PORT $JAVA_OPTS -jar build/libs/*.jar
