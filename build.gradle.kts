@@ -12,6 +12,7 @@ group = "com.base.t"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 
+
 repositories {
 	mavenCentral()
 }
@@ -32,12 +33,12 @@ dependencies {
 
 application {
 	// Define the main class for the application
-	mainClassName = "com.base.t.CircleIntroduction.CircleIntroductionApplication.Kt"
+	mainClassName = "com.base.t.CircleIntroduction.CircleIntroductionApplication"
 }
 
 val jar by tasks.getting(Jar::class) {
 	manifest {
-		attributes["Main-Class"] = "com.base.t.CircleIntroduction.CircleIntroductionApplication.Kt"
+		attributes["Main-Class"] = "com.base.t.CircleIntroduction.CircleIntroductionApplication"
 	}
 	from(
 			configurations.compile.get().map {

@@ -17,7 +17,7 @@
          <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
             <div class="sub">
                 <a class="name" th:href="@{'/circleDetail/'+${circle.id}}" th:text="${circle.name}"></a>
-                <p class="content" th:text="${circle.organization}"></p>
+                <p class="content" th:text="${circle.classification}"></p>
             </div>
      </div>
  </div>

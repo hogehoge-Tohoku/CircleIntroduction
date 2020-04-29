@@ -4,8 +4,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class CircleIntroductionApplication
+open class CircleIntroductionApplication {
 
-fun main(args: Array<String>) {
-	runApplication<CircleIntroductionApplication>(*args)
+	companion object {
+		@JvmStatic fun main(args: Array<String>) {
+			runApplication<CircleIntroductionApplication>(*args)
+		}
+	}
 }
