@@ -1,1 +1,1 @@
-web: java -jar ./build/libs/CircleIntroduction-0.0.1-SNAPSHOT.jar --server.port=5432
+web: java -jar ./build/libs/CircleIntroduction-0.0.1-SNAPSHOT.jar
