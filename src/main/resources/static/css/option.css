@@ -1,4 +1,3 @@
-@media screen and (min-width: 1000px) {
     body {
         background-color: #F0F0F0;
         font-family: Arial, sans-serif;
@@ -32,42 +31,43 @@
         float: left;
         padding-right: 50px;
     }
+
+
+@media screen and (max-width: 500px) {
+
+    body {
+        background-color: #F0F0F0;
+        font-family: Arial, sans-serif;
+        color: #707070;
+    }
+
+    .large {
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .move {
+        font-size: 40px;
+        cursor: pointer;
+        color: #707070;
+    }
+
+    .move:hover {
+        color: #333333;
+    }
+
+    .large li {
+        overflow: hidden;
+        height: 100%;
+        font-size: 65px;
+        list-style: none;
+    }
+
+    .small li {
+        font-size: 40px;
+        list-style: none;
+        float: left;
+        padding-right: 50px;
+    }
+
 }
-
-
-
-body {
-    background-color: #F0F0F0;
-    font-family: Arial, sans-serif;
-    color: #707070;
-}
-
-.large {
-    overflow: hidden;
-    height: 100%;
-}
-
-.move {
-    font-size: 40px;
-    cursor: pointer;
-    color: #707070;
-}
-
-.move:hover {
-    color: #333333;
-}
-
-.large li {
-    overflow: hidden;
-    height: 100%;
-    font-size: 65px;
-    list-style: none;
-}
-
-.small li {
-    font-size: 40px;
-    list-style: none;
-    float: left;
-    padding-right: 50px;
-}
-
