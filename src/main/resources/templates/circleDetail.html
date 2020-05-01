@@ -38,11 +38,13 @@
         <p class="content">
             <a class="twitter-follow-button btn"
                 th:href="@{__${form.twitter}__}"
+               target="_blank"
                data-size="large" th:if="!${form.twitter==null}">
                 Twitter
             </a>
             <a class="instagram-follow-button btn"
                th:href="@{__${form.instagram}__}"
+               target="_blank"
                data-size="large" th:if="!${form.instagram==null}">Instagram
             </a>
         </p>
