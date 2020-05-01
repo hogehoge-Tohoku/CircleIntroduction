@@ -14,7 +14,12 @@
  </div>
  <div class="container"  th:each="circle : ${circleList}">
      <div class="circle">
-         <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
+         <span th:if="${circle.pictureNum}>0">
+            <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
+         </span>
+         <span th:unless="${circle.pictureNum>0}">
+            <img th:src="@{'/image/noimage.jpeg'}" width="572px" height="352px">
+         </span>
             <div class="sub">
                 <a class="name" th:href="@{'/circleDetail/'+${circle.id}}" th:text="${circle.name}"></a>
                 <p class="content" th:text="${circle.classification}"></p>

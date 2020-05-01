@@ -14,11 +14,13 @@
 </div>
 
 <div class="main" th:object="${form}">
-    <ul class="image_wrapper">
-        <li  class="image" th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
-            <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="429px" height="264px">
-        </li>
-    </ul>
+    <span th:if="${form.pictureNum>0}">
+        <ul class="image_wrapper">
+            <li  class="image" th:each="seq : ${#numbers.sequence(1,__${form.pictureNum}__)}">
+                <img th:src="@{'/image/'+${form.pictureName}+'_'+${seq}+'.jpeg'}" width="429px" height="264px">
+            </li>
+        </ul>
+    </span>
     <div class="container">
         <h2 class="main activity">活動紹介</h2>
         <p class="content scroll" th:text="*{introduction}"></p>
