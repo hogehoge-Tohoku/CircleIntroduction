@@ -30,9 +30,10 @@
         <p class="content" th:text="*{welcomePartyInf}"></p>
         <h2 class="main mail">問い合わせ</h2>
         <p class="content">
-            <span>
-                問い合わせメール：
-            </span><a th:href="@{mailto:__${form.email}__}" th:text="*{email}"></a>
+            <span th:if="${form.email!=null}">
+                問い合わせメール:
+            </span>
+            <a th:href="@{mailto:__${form.email}__}" th:text="*{email}"></a>
         </p>
         <p class="content">
             <a class="twitter-follow-button btn"
