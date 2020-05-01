@@ -102,7 +102,7 @@ null,
 'https://twitter.com/tonpeinanya',
 null,
 '東北大学学友会軟式野球部',
-0
+1
 );
 
 INSERT INTO circle(
