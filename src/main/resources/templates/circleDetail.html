@@ -28,8 +28,22 @@
         <p class="content" th:text="*{welcomePartyInf}"></p>
         <h2 class="main mail">問い合わせ</h2>
         <p class="content">
-            <a href="mailto:info@example.com" th:text="*{inquiry}"></a>
+            <span>
+                問い合わせメール：
+            </span><a th:href="@{mailto:__${form.email}__}" th:text="*{email}"></a>
         </p>
+        <p class="content">
+            <a class="twitter-follow-button btn"
+                th:href="@{__${form.twitter}__}"
+               data-size="large" th:if="!${form.twitter==null}">
+                Twitter
+            </a>
+            <a class="instagram-follow-button btn"
+               th:href="@{__${form.instagram}__}"
+               data-size="large" th:if="!${form.instagram==null}">Instagram
+            </a>
+        </p>
+
     </div>
 </div>
 </body>

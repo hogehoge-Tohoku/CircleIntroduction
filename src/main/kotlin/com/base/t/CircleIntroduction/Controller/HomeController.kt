@@ -21,7 +21,6 @@ class HomeController {
     fun getHome(@ModelAttribute("model") modelMap: ModelMap, model: Model): String {
 
         val optionCircleList = modelMap["optionalCircle"]
-        val flag = modelMap["flag"]
         println(optionCircleList)
         if(optionCircleList == null) {
             val circleList = homeService.selectAll()
@@ -46,7 +45,9 @@ class HomeController {
         form.atmosphere = circle.atmosphere
         form.introduction = circle.introduction
         form.welcomePartyInf = circle.welcomePartyInf
-        form.inquiry = circle.inquiry
+        form.email = circle.email
+        form.twitter = circle.twitter
+        form.instagram = circle.instagram
         form.pictureName = circle.pictureName
         form.pictureNum = circle.pictureNum
         model.addAttribute("form", form)

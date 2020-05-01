@@ -9,7 +9,9 @@ data class Circle(
         var atmosphere: String?,
         var introduction: String?,
         var welcomePartyInf: String?,
-        var inquiry: String?,
+        var email: String?,
+        var twitter: String?,
+        var instagram: String?,
         var pictureName: String?,
         var pictureNum: Int?
 )

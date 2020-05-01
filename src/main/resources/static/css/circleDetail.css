@@ -62,3 +62,52 @@ h1{
     display: inline-block;
 }
 
+.btn {
+    float: left;
+    margin-left: 10px;
+}
+
+.twitter-follow-button {
+    background-color: #008DDE;
+    box-shadow: 0 4px 0 #0078BD;
+
+    display: inline;
+    position: relative;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+.twitter-follow-button:active {
+    top: 2px;
+    box-shadow: 0 2px 0 #0078BD;
+}
+.twitter-follow-button:hover {
+    background-color: #1397D8;
+}
+
+
+.instagram-follow-button{
+    background-color: #d93177;
+    box-shadow: 0 4px 0 #9e2054;
+    position: relative;
+    display: inline;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+.instagram-follow-button:active{
+    top: 2px;
+    box-shadow: 0 2px 0 rgba(217, 49, 119, 0.53);
+}
+
+.instagram-follow-button:hover {
+    background-color: #d44982;
+}
