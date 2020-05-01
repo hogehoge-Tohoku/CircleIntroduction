@@ -1,73 +1,201 @@
-body{
-    background-color:#F0F0F0 ;
-    font-family:Arial,sans-serif;
-    width:100%;
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: #F0F0F0;
+        font-family: Arial, sans-serif;
+        width: 100%;
+    }
+
+    .top {
+        height: 226px;
+        border-bottom: 1px solid #707070;
+        margin-bottom: 10px;
+    }
+
+    .return {
+        color: #707070;
+        font-size: 40px;
+    }
+
+    .return:hover {
+        color: #333333;
+    }
+
+
+    h1 {
+        color: #707070;
+        font-size: 80px;
+        font-weight: normal;
+        top: 113px;
+        left: 32px;
+        padding: 30px 0 0 50px;
+        margin: 0;
+    }
+
+    .main {
+        z-index: 0;
+    }
+
+    .container {
+        margin-left: 7%;
+        width: 70%;
+        padding-bottom: 30px;
+        float: left;
+    }
+
+    .item {
+        font-size: 40px;
+        color: #707070;
+        margin: 10px 0 0 0;
+    }
+
+    .content {
+        margin: 8px 0 12px 5px;
+        font-size: 25px;
+        color: #707070;
+
+    }
+
+    .image_wrapper {
+        margin-right: 20px;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .image {
+        margin: 10px 0;
+        border: 5px solid #FFFFFF;
+        display: inline-block;
+    }
+
+    .btn {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .twitter-follow-button {
+        background-color: #008DDE;
+        box-shadow: 0 4px 0 #0078BD;
+
+        display: inline;
+        position: relative;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        padding: 14px 80px;
+    }
+
+    .twitter-follow-button:active {
+        top: 2px;
+        box-shadow: 0 2px 0 #0078BD;
+    }
+
+    .twitter-follow-button:hover {
+        background-color: #1397D8;
+    }
+
+
+    .instagram-follow-button {
+        background-color: #d93177;
+        box-shadow: 0 4px 0 #9e2054;
+        position: relative;
+        display: inline;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+        padding: 14px 80px;
+    }
+
+    .instagram-follow-button:active {
+        top: 2px;
+        box-shadow: 0 2px 0 rgba(217, 49, 119, 0.53);
+    }
+
+    .instagram-follow-button:hover {
+        background-color: #d44982;
+    }
+
 }
 
-.top{
-    height:226px;
-    border-bottom: 1px solid #707070;
-    /*position:fixed;*/
-    z-index: 1;
-    margin-bottom: 10px;
+
+
+
+body {
+    background-color: #F0F0F0;
+    font-family: Arial, sans-serif;
+    width: 100%;
 }
-.return{
-    color:#707070;
-    font-size:40px;
+
+.return {
+    color: #707070;
+    font-size: 40px;
 }
-.return:hover{
+
+.return:hover {
     color: #333333;
 }
 
 
-h1{
-    color:#707070;
-    font-size:80px;
+h1 {
+    color: #707070;
+    font-size: 80px;
     font-weight: normal;
     top: 113px;
     left: 32px;
     padding: 30px 0 0 50px;
     margin: 0;
 }
+h2 {
+    margin:0 0;
+}
 
-.main{
-    z-index: 0;
+.main {
 }
-.container{
-    margin-left:7%;
-    width: 70%;
-    padding-bottom:30px;
-    float: left;
-}
-.item{
+
+
+.item {
     font-size: 40px;
-    color:#707070;
-    margin:10px 0 0 0;
+    color: #707070;
+    margin: 10px 0 0 0;
 }
-.content{
-    margin:8px 0 12px 5px;
-    font-size: 25px;
-    color:#707070;
+
+.content {
+    margin: 8px 0 12px 5px;
+    font-size: 12px;
+    color: #000000;
 
 }
-.image_wrapper{
-    margin-right: 20px;
+
+.image_wrapper {
+    height: 200px;
+    padding-left: 0;
     overflow-x: auto;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch;
 }
-.image{
-    margin:10px 0;
-    border: 5px solid #FFFFFF ;
+
+.image {
+    margin: 10px 0;
+    border: 5px solid #FFFFFF;
     display: inline-block;
 }
-
+img {
+    height: 170px;
+    width: 230px;
+}
 .btn {
     float: left;
     margin-left: 10px;
 }
 
 .twitter-follow-button {
+    margin-bottom: 10px;
     background-color: #008DDE;
     box-shadow: 0 4px 0 #0078BD;
 
@@ -81,16 +209,18 @@ h1{
     border-radius: 5px;
     padding: 14px 80px;
 }
+
 .twitter-follow-button:active {
     top: 2px;
     box-shadow: 0 2px 0 #0078BD;
 }
+
 .twitter-follow-button:hover {
     background-color: #1397D8;
 }
 
 
-.instagram-follow-button{
+.instagram-follow-button {
     background-color: #d93177;
     box-shadow: 0 4px 0 #9e2054;
     position: relative;
@@ -103,11 +233,48 @@ h1{
     border-radius: 5px;
     padding: 14px 80px;
 }
-.instagram-follow-button:active{
+
+.instagram-follow-button:active {
     top: 2px;
     box-shadow: 0 2px 0 rgba(217, 49, 119, 0.53);
 }
 
 .instagram-follow-button:hover {
     background-color: #d44982;
+}
+
+.return{
+    color:#707070;
+    font-size:30px;
+}
+.return:hover{
+    color: #333333;
+}
+
+.top{
+    height:150px;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 15px;
+}
+img {
+   max-width : 100% ;
+}
+h1 {
+    color:#707070;
+    font-size:30px;
+    font-weight: normal;
+    top: 113px;
+    left: 32px;
+    padding: 30px 0 0 7px;
+    margin: 0;
+}
+p {
+    font-size: 10px;
+}
+
+.container {
+    margin-left: 7%;
+    width: 90%;
+    padding-bottom: 30px;
+    float: left;
 }

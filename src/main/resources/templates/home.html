@@ -12,18 +12,20 @@
      <h2>Search</h2>
      <p class="hit">サークル一覧　<span th:text="${count}"></span>件ヒット<a class="search" th:href="@{'/option'}">条件を絞る</a></p>
  </div>
- <div class="container"  th:each="circle : ${circleList}">
-     <div class="circle">
-         <span th:if="${circle.pictureNum}>0">
-            <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}" width="572px" height="352px">
-         </span>
-         <span th:unless="${circle.pictureNum>0}">
-            <img th:src="@{'/image/noimage.jpeg'}" width="572px" height="352px">
-         </span>
+ <div class="container-wrapper">
+     <div class="container"  th:each="circle : ${circleList}">
+        <div class="circle">
+            <span th:if="${circle.pictureNum}>0">
+                <img th:src="@{'/image/'+${circle.pictureName}+'.jpeg'}">
+            </span>
+            <span th:unless="${circle.pictureNum>0}">
+                <img th:src="@{'/image/noimage.jpeg'}" width="572px" height="352px">
+            </span>
             <div class="sub">
                 <a class="name" th:href="@{'/circleDetail/'+${circle.id}}" th:text="${circle.name}"></a>
                 <p class="content" th:text="${circle.classification}"></p>
             </div>
+        </div>
      </div>
  </div>
 </body>
