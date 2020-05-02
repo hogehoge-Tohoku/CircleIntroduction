@@ -30,6 +30,12 @@
         <p class="content" th:text="*{welcomePartyInf}"></p>
         <h2 class="main mail">問い合わせ</h2>
         <p class="content">
+            <span th:if="${form.homePage!=null}">
+                公式サイト:
+            </span>
+            <a th:href="@{__${form.homePage}__}" target="_blank" th:text="*{homePage}"></a>
+        </p>
+        <p class="content">
             <span th:if="${form.email!=null}">
                 問い合わせメール:
             </span>

@@ -45,9 +45,11 @@ class HomeController {
         form.atmosphere = circle.atmosphere
         form.introduction = circle.introduction
         form.welcomePartyInf = circle.welcomePartyInf
+        form.homePage = circle.homePage
         form.email = circle.email
         form.twitter = circle.twitter
         form.instagram = circle.instagram
+        form.line = circle.line
         form.pictureName = circle.pictureName
         form.pictureNum = circle.pictureNum
         model.addAttribute("form", form)
