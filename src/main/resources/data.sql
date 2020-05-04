@@ -216,3 +216,35 @@ null,
 '東北大学学友会漕艇部',
 8
 );
+
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ home_page,
+ email,
+ twitter,
+ instagram,
+ line,
+ picture_name,
+ picture_num)
+VALUES (
+ 8,
+'TUSTEM(Tohoku University STEM student network)',
+'非学友会(サークル)',
+'全学',
+'留学生と日本人で構成されています。学部は主に理系学生が中心ですが、文系を含めて色々な学部の人が所属しています。',
+'TUSTEMは主に理系の留学生と、日本人学生の相互の交流を目指す国際交流団体となっております🌏 毎週火曜日のディナー会、隔週木曜日の言語交換会などの交流イベントに加え、海外の大学の教授をお招きしての講演会やコーヒーイベントといったアカデミックなイベントにも力を入れています。そのほかBBQや芋煮会、クリスマスパーティーなど季節ごとのイベントもあります！ 留学生と仲良くなりたい方、留学に興味がある方は、文系理系問わず是非一度お越しください！😆',
+'毎週火曜日にディナー会、隔週木曜日に言語交換会をすべてオンラインで開催しています。他にも様々なイベントを企画中ですので、ぜひTwitterをフォローして、情報をチェックしてください！',
+null,
+'t.stem.network@gmail.com',
+'https://twitter.com/StemTohoku',
+null,
+null,
+'TUSTEM',
+4
+);
