@@ -1,3 +1,9 @@
 spring:
   jackson:
     property-naming-strategy: SNAKE_CASE
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ec2-34-194-198-176.compute-1.amazonaws.com:5432/d4g8is7fhtjchg?user=eabdiejvjifnft&password=02216ad23c3a65e9c01c9d658dad34c575dfcc4c1414c6777b90e743bc2a0056&sslmode=require
+    data-username: eabdiejvjifnft
+    data-password: 02216ad23c3a65e9c01c9d658dad34c575dfcc4c1414c6777b90e743bc2a0056
+    initialization-mode: always
