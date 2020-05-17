@@ -234,7 +234,7 @@ INSERT INTO circle(
  picture_num)
 VALUES (
  8,
-'TUSTEM(Tohoku University STEM student network)',
+'TUSTEM',
 '非学友会(サークル)',
 '全学',
 '留学生と日本人で構成されています。学部は主に理系学生が中心ですが、文系を含めて色々な学部の人が所属しています。',
@@ -247,4 +247,132 @@ null,
 null,
 'TUSTEM',
 4
+);
+
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ home_page,
+ email,
+ twitter,
+ instagram,
+ line,
+ picture_name,
+ picture_num)
+VALUES (
+ 9,
+'東北大学 学友会 囲碁部',
+'学友会文化部',
+'全学',
+'学部生から院生まで多くの部員が在籍しています、人数は全体で40名程度です',
+'囲碁に興味を持つもの同士での対局や交流',
+'zoomを利用したオンライン新歓',
+null,
+null,
+'https://twitter.com/tompei_igo',
+null,
+null,
+'東北大学学友会囲碁部',
+null
+);
+
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ home_page,
+ email,
+ twitter,
+ instagram,
+ line,
+ picture_name,
+ picture_num)
+VALUES (
+ 10,
+'東北大学国際交流団体IPLANET ',
+'その他',
+'全学',
+'国籍に関係なく、みんな仲が良いです。人数は150~200程度で、いろんな学部の人がいます。',
+'ご入学おめでとうございます🌸  IPLANETはIPLA(International Program in Liberal Artsの略)という東北大学の留学プログラムで日本に来る留学生と交流したり、その留学生のサポートを目的とした東北大学の公式の日本人の団体です。  留学生・日本人が国籍に関係なく皆で仲良く活動しています！ 留学生のサポートをしてみたい人、留学に興味がある人、英語を上達させたい人、他の活動と両立させたい人、将来役立つ情報を知りたい人、等々、興味のある人はぜひ気軽に参加してください！ 新入生のみなさんに会えることを楽しみにしています！！',
+'毎週水曜日と金曜日の夜8時から',
+null,
+null,
+'https://twitter.com/iplanet _tohoku',
+null,
+null,
+'IPLANET',
+4
+);
+
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ home_page,
+ email,
+ twitter,
+ instagram,
+ line,
+ picture_name,
+ picture_num)
+VALUES (
+ 11,
+'ブルーグラス同好会',
+'非学友会(サークル)',
+'全学',
+'学部1年生から修士2年生まで、100人規模のサークルです。同期間も、先輩後輩間も仲が良く、音楽を楽しむ環境があります。部員の半数は、大学から楽器を始めたので、初心者でも全く心配はいりません。また、とても自由度が高いサークルで、どのくらい活動に打ち込むかは、自分次第です。',
+'ブルーグラスとは、音楽のジャンルのひとつで、アメリカで生まれたカントリー・フォークチックな音楽を指します。ギター、マンドリン、ウッドベース、バンジョー、フィドル、ドブロの６つの楽器でバンドを組み演奏します。ブルーグラス同好会のYouTubeチャンネルがあるので、どんな雰囲気の音楽か聞いてみてください！ 年間を通して、サークル内での発表会や、ブルーグラスフェスへの参加、大学祭、定期演奏会など多くの演奏機会があります。 　以下が年間予定になります。 　４月　スプリングフェスティバル 　　　新歓フリーライブ 　５月　新歓確定ライブ 　６月　部内発表会 　８月　箱根フェス、鬼ヶ城フェス 　９月　定禅寺ジャズフェス　納涼会 １０月　芋煮会 １１月　学祭 １２月　定期演奏会 　１月　新年会 　２月　駒ケ根フェス　ずんだフェス 　３月　追いコン',
+'ツイッター、インスタグラム、ラインのオープンチャットにて情報を発信しています。 対面での新歓活動が解禁されれば、楽器体験等も行う予定です。',
+null,
+null,
+'https://twitter.com/tohokubluegrass',
+'https://instagram.com/tohoku.bluegrass',
+null,
+'ブルーグラス同好会',
+5
+);
+
+INSERT INTO circle(
+ id,
+ name,
+ classification,
+ organization,
+ atmosphere,
+ introduction,
+ welcome_party_inf,
+ home_page,
+ email,
+ twitter,
+ instagram,
+ line,
+ picture_name,
+ picture_num)
+VALUES (
+ 12,
+'東北大学 学友会 演劇部',
+'学友会文化部',
+'全学',
+'各公演ごとにおよそ20人くらいの規模で演劇を作っています。まるで毎日が文化祭！公演ごとに参加希望をとるので部員たちは自分たちのペースで演劇と関わっています！',
+'演劇部は例年、年4~5回の公演を川内ホール104号室で行っています。',
+'オンライン説明会 5/24,25,28,30,31全日17時から詳しくは新歓ツイッターをご覧ください。',
+null,
+'lastmagic913@gmail.com',
+'https://twitter.com/Tonpei_drama_we',
+null,
+null,
+'東北大学学友会演劇部',
+3
 );
